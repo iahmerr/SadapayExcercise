@@ -39,6 +39,7 @@
 		7BB6219428896E4C00DCBCB4 /* TrendingRepoResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BB6219328896E4C00DCBCB4 /* TrendingRepoResponse.json */; };
 		7BB621962889709B00DCBCB4 /* APIServiceMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621952889709B00DCBCB4 /* APIServiceMocked.swift */; };
 		7BB621982889721B00DCBCB4 /* TestApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621972889721B00DCBCB4 /* TestApiService.swift */; };
+		7BB6219A2889762C00DCBCB4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621992889762C00DCBCB4 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		7BB6219328896E4C00DCBCB4 /* TrendingRepoResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TrendingRepoResponse.json; sourceTree = "<group>"; };
 		7BB621952889709B00DCBCB4 /* APIServiceMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMocked.swift; sourceTree = "<group>"; };
 		7BB621972889721B00DCBCB4 /* TestApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiService.swift; sourceTree = "<group>"; };
+		7BB621992889762C00DCBCB4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 			children = (
 				7BB6215B2888EEC900DCBCB4 /* ReuseableTableViewCell.swift */,
 				7BB621792889116800DCBCB4 /* ReusableTableViewCellViewModelType.swift */,
+				7BB621992889762C00DCBCB4 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB6219A2889762C00DCBCB4 /* UIView+Extension.swift in Sources */,
 				7BB621962889709B00DCBCB4 /* APIServiceMocked.swift in Sources */,
 				7BB6214F2888EDC600DCBCB4 /* UIButtonFactory.swift in Sources */,
 				7BB621822889270E00DCBCB4 /* APIClient.swift in Sources */,
