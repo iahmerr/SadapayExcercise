@@ -25,7 +25,7 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
     //MARK: UIElements
     let profileImage: UIImageView = UIImageViewFactory.createImageView(mode: .scaleToFill)
     lazy var languageName = UILabelFactory.createUILabel(with: .darkGray, textStyle: .small, fontWeight: .regular, alignment: .left, numberOfLines: 0)
-    lazy var fullName = UILabelFactory.createUILabel(with: .black, textStyle: .regular, alignment: .left, numberOfLines: 0)
+    lazy var fullName = UILabelFactory.createUILabel(with: UIColor.color_black_white, textStyle: .regular, alignment: .left, numberOfLines: 0)
     lazy var starsLabel: UILabel = UILabelFactory.createUILabel(with: .gray, textStyle: .small)
     
     lazy var stack: UIStackView = UIStackViewFactory.createStackView(with: .vertical, alignment: .fill, distribution: .fillEqually, spacing: 5, arrangedSubviews: [fullName, languageName, starsLabel])
@@ -61,7 +61,7 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
 
 extension TrendingRepoTableViewCell {
     func setupViews() {
-        backgroundColor = .white
+        backgroundColor = UIColor.color_white_black
         [profileImage,stack, seperatorView].forEach(addSubview)
     }
     

@@ -15,8 +15,8 @@ class TrendingRepoListViewController: UIViewController {
     private var viewModel: TrendingRepoListViewModelType
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        tableView.backgroundColor = .white
+        view.backgroundColor = UIColor.color_white_black
+        tableView.backgroundColor = UIColor.color_white_black
         
         tableView.delegate = self
         tableView.dataSource = self

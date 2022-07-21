@@ -13,12 +13,13 @@ public final class UINavigationControllerFactory {
     public class func createTransparentNavigationController(rootViewController: UIViewController, barStyle: UIBarStyle? = .default ) -> UINavigationController {
         let nav = UINavigationController(rootViewController: rootViewController)
         nav.navigationBar.tintColor = .black
+        nav.navigationBar.backgroundColor = UIColor.color_white_black
         nav.navigationBar.setBackgroundImage(UIImage(), for: .default)
         nav.navigationBar.shadowImage = UIImage()
         nav.navigationBar.isTranslucent = true
         nav.navigationBar.isHidden = false
         nav.modalPresentationStyle = .fullScreen
-        nav.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.regular, NSAttributedString.Key.foregroundColor: UIColor.black]
+        nav.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.regular, NSAttributedString.Key.foregroundColor: UIColor.color_black_white]
         nav.navigationBar.barStyle = barStyle ?? .default
         return nav
     }
