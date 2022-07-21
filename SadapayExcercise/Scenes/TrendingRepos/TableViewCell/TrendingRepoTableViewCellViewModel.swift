@@ -28,6 +28,6 @@ class TrendingRepoTableViewCellViewModel: TrendingRepoTableViewCellViewModelType
 extension TrendingRepoTableViewCellViewModel {
     
     func fetchData() {
-        postDataClosure?(item.name,item.language, "\(String(describing: item.stargazers_count))", item.owner?.avatar_url)
+        postDataClosure?(item.name,item.language, "\(item.stargazers_count)", item.owner?.avatar_url)
     }
 }

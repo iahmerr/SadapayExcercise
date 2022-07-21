@@ -31,9 +31,9 @@ class TrendingRepoTableViewCellTest: XCTestCase {
             XCTAssertNotNil(val1)
             XCTAssertEqual(val1, "LayaAir")
             XCTAssertNotNil(val2)
-            XCTAssertEqual(val2, "https://api.github.com/repos/layabox/LayaAir")
+            XCTAssertEqual(val2, "TypeScript")
             XCTAssertNotNil(val3)
-            XCTAssertEqual(val3, "layabox/LayaAir")
+            XCTAssertEqual(val3, "1141")
             XCTAssertNotNil(val4)
             XCTAssertEqual(val4, "https://avatars.githubusercontent.com/u/11814868?v=4")
         }

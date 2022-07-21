@@ -26,7 +26,8 @@ class TestDecodeData: XCTestCase {
         XCTAssertNotNil(decodedResult)
         XCTAssertEqual(decodedResult?.total_count, 523)
         XCTAssertEqual(decodedResult?.items?[0].name, "LayaAir")
-        XCTAssertEqual(decodedResult?.items?[0].owner?.url, "https://api.github.com/users/layabox")
-        XCTAssertEqual(decodedResult?.items?[0].isPrivate, false)
+        XCTAssertEqual(decodedResult?.items?[0].owner?.avatar_url, "https://avatars.githubusercontent.com/u/11814868?v=4")
+        XCTAssertEqual(decodedResult?.items?[0].language, "TypeScript")
+        XCTAssertEqual(decodedResult?.items?[0].stargazers_count, 1141)
     }
 }
