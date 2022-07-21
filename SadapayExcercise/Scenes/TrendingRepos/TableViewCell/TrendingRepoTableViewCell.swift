@@ -17,6 +17,9 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
         static let stackTopAnchor: CGFloat = 20
         static let stackBottomAnchor: CGFloat = -20
         static let stackHeightAnchor: CGFloat = 80
+        static let seperatorViewLeadingAnchor: CGFloat = 15
+        static let seperatorViewTrailingAnchor: CGFloat = -15
+        static let seperatorViewHeightAnchor: CGFloat = 0.5
     }
     
     //MARK: UIElements
@@ -76,9 +79,9 @@ extension TrendingRepoTableViewCell {
             stack.heightAnchor.constraint(equalToConstant: Constants.stackHeightAnchor),
             
             seperatorView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            seperatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            seperatorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            seperatorView.heightAnchor.constraint(equalToConstant: 0.5)
+            seperatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.seperatorViewLeadingAnchor),
+            seperatorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.seperatorViewTrailingAnchor),
+            seperatorView.heightAnchor.constraint(equalToConstant: Constants.seperatorViewHeightAnchor)
         ])
     }
 }
