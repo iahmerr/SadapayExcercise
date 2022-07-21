@@ -40,6 +40,12 @@
 		7BB621962889709B00DCBCB4 /* APIServiceMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621952889709B00DCBCB4 /* APIServiceMocked.swift */; };
 		7BB621982889721B00DCBCB4 /* TestApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621972889721B00DCBCB4 /* TestApiService.swift */; };
 		7BB6219A2889762C00DCBCB4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621992889762C00DCBCB4 /* UIView+Extension.swift */; };
+		7BB621AC2889789A00DCBCB4 /* TrendingRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621AB2889789A00DCBCB4 /* TrendingRepoTableViewCell.swift */; };
+		7BB621AE288978B400DCBCB4 /* TrendingRepoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621AD288978B400DCBCB4 /* TrendingRepoTableViewCellViewModel.swift */; };
+		7BB621B1288985FB00DCBCB4 /* ShimmeringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B0288985FB00DCBCB4 /* ShimmeringTableViewCell.swift */; };
+		7BB621B32889861600DCBCB4 /* ShimmeringTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B22889861600DCBCB4 /* ShimmeringTableViewCellViewModel.swift */; };
+		7BB621B62889BBA700DCBCB4 /* TrendingRepoTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B52889BBA700DCBCB4 /* TrendingRepoTableViewCellTest.swift */; };
+		7BB621B82889D23200DCBCB4 /* UIViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B72889D23200DCBCB4 /* UIViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +103,12 @@
 		7BB621952889709B00DCBCB4 /* APIServiceMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMocked.swift; sourceTree = "<group>"; };
 		7BB621972889721B00DCBCB4 /* TestApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiService.swift; sourceTree = "<group>"; };
 		7BB621992889762C00DCBCB4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		7BB621AB2889789A00DCBCB4 /* TrendingRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCell.swift; sourceTree = "<group>"; };
+		7BB621AD288978B400DCBCB4 /* TrendingRepoTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		7BB621B0288985FB00DCBCB4 /* ShimmeringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringTableViewCell.swift; sourceTree = "<group>"; };
+		7BB621B22889861600DCBCB4 /* ShimmeringTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		7BB621B52889BBA700DCBCB4 /* TrendingRepoTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCellTest.swift; sourceTree = "<group>"; };
+		7BB621B72889D23200DCBCB4 /* UIViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +210,8 @@
 		7BB621462888ECAA00DCBCB4 /* TrendingRepos */ = {
 			isa = PBXGroup;
 			children = (
+				7BB621AF288985A100DCBCB4 /* ShimmeringTableViewCell */,
+				7BB621AA2889786800DCBCB4 /* TableViewCell */,
 				7BB621472888ECC500DCBCB4 /* ModuleBuilder */,
 				7BB621632888F6B300DCBCB4 /* TrendingRepoViewModel.swift */,
 				7BB621682888FA1900DCBCB4 /* TrendingRepoListViewController.swift */,
@@ -234,6 +248,7 @@
 				7BB621542888EDD300DCBCB4 /* UIStackViewFactory.swift */,
 				7BB621562888EDD600DCBCB4 /* UINavigationControllerFactory.swift */,
 				7BB621582888EDDA00DCBCB4 /* UITableViewFactory.swift */,
+				7BB621B72889D23200DCBCB4 /* UIViewFactory.swift */,
 			);
 			path = UIFactories;
 			sourceTree = "<group>";
@@ -267,6 +282,7 @@
 		7BB621652888F7D300DCBCB4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7BB621B42889BB8400DCBCB4 /* TableViewCell */,
 				7BB621662888F7EA00DCBCB4 /* RepoListViewModelTest.swift */,
 			);
 			path = Scenes;
@@ -325,6 +341,32 @@
 				7BB621952889709B00DCBCB4 /* APIServiceMocked.swift */,
 			);
 			path = MockedFiles;
+			sourceTree = "<group>";
+		};
+		7BB621AA2889786800DCBCB4 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621AB2889789A00DCBCB4 /* TrendingRepoTableViewCell.swift */,
+				7BB621AD288978B400DCBCB4 /* TrendingRepoTableViewCellViewModel.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		7BB621AF288985A100DCBCB4 /* ShimmeringTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621B0288985FB00DCBCB4 /* ShimmeringTableViewCell.swift */,
+				7BB621B22889861600DCBCB4 /* ShimmeringTableViewCellViewModel.swift */,
+			);
+			path = ShimmeringTableViewCell;
+			sourceTree = "<group>";
+		};
+		7BB621B42889BB8400DCBCB4 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621B52889BBA700DCBCB4 /* TrendingRepoTableViewCellTest.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,22 +503,27 @@
 			files = (
 				7BB6219A2889762C00DCBCB4 /* UIView+Extension.swift in Sources */,
 				7BB621962889709B00DCBCB4 /* APIServiceMocked.swift in Sources */,
+				7BB621B1288985FB00DCBCB4 /* ShimmeringTableViewCell.swift in Sources */,
 				7BB6214F2888EDC600DCBCB4 /* UIButtonFactory.swift in Sources */,
 				7BB621822889270E00DCBCB4 /* APIClient.swift in Sources */,
+				7BB621B32889861600DCBCB4 /* ShimmeringTableViewCellViewModel.swift in Sources */,
 				7BB621852889276600DCBCB4 /* AppError.swift in Sources */,
 				7BB621572888EDD600DCBCB4 /* UINavigationControllerFactory.swift in Sources */,
 				7BB621532888EDD000DCBCB4 /* UILabelFactory.swift in Sources */,
 				7BB621622888F03700DCBCB4 /* AppTheme.swift in Sources */,
+				7BB621B82889D23200DCBCB4 /* UIViewFactory.swift in Sources */,
 				7BB621552888EDD300DCBCB4 /* UIStackViewFactory.swift in Sources */,
 				7BB621692888FA1900DCBCB4 /* TrendingRepoListViewController.swift in Sources */,
 				7BB621642888F6B300DCBCB4 /* TrendingRepoViewModel.swift in Sources */,
 				7BB6218D288965DD00DCBCB4 /* GitReposResponse.swift in Sources */,
 				7BB6215C2888EEC900DCBCB4 /* ReuseableTableViewCell.swift in Sources */,
 				7BB621492888ECE400DCBCB4 /* TrendingRepoModuleBuilder.swift in Sources */,
+				7BB621AC2889789A00DCBCB4 /* TrendingRepoTableViewCell.swift in Sources */,
 				7BB621592888EDDA00DCBCB4 /* UITableViewFactory.swift in Sources */,
 				7BB6217D2889162200DCBCB4 /* Endpoint.swift in Sources */,
 				7BB6215F2888EFEE00DCBCB4 /* AppFont.swift in Sources */,
 				7BB621152888EB6100DCBCB4 /* AppDelegate.swift in Sources */,
+				7BB621AE288978B400DCBCB4 /* TrendingRepoTableViewCellViewModel.swift in Sources */,
 				7BB6218A2889653800DCBCB4 /* GitRepoService.swift in Sources */,
 				7BB621172888EB6100DCBCB4 /* SceneDelegate.swift in Sources */,
 				7BB6217A2889116800DCBCB4 /* ReusableTableViewCellViewModelType.swift in Sources */,
@@ -492,6 +539,7 @@
 				7BB62180288917F500DCBCB4 /* TestEndpoint.swift in Sources */,
 				7BB621982889721B00DCBCB4 /* TestApiService.swift in Sources */,
 				7BB6218F288967CE00DCBCB4 /* TestDecodeData.swift in Sources */,
+				7BB621B62889BBA700DCBCB4 /* TrendingRepoTableViewCellTest.swift in Sources */,
 				7BB621672888F7EA00DCBCB4 /* RepoListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

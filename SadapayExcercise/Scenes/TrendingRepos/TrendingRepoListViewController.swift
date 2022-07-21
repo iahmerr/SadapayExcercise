@@ -12,22 +12,25 @@ class TrendingRepoListViewController: UIViewController {
     //MARK: UI Elements
     lazy var tableView: UITableView = UITableViewFactory.createUITableView(seperatorStyle: .none, showsVerticalScrollIndicator: false)
 
-    private let viewModel: TrendingRepoListViewModelType
+    private var viewModel: TrendingRepoListViewModelType
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        tableView.backgroundColor = .white
         
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        self.title = viewModel.outputs.getTitle()
+        self.title = viewModel.getTitle()
         setupViews()
         setupConstraints()
+        bindViews()
     }
     
     init(viewModel: TrendingRepoListViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        viewModel.fetchGitRepos()
     }
     
     required init?(coder: NSCoder) {
@@ -39,6 +42,8 @@ fileprivate extension TrendingRepoListViewController {
     
     func setupViews() {
         [tableView].forEach(view.addSubview)
+        tableView.register(TrendingRepoTableViewCell.self, forCellReuseIdentifier: TrendingRepoTableViewCell.reuseIdentifier)
+        tableView.register(ShimmeringTableViewCell.self, forCellReuseIdentifier: ShimmeringTableViewCell.reuseIdentifier)
     }
     
     func setupConstraints() {
@@ -49,17 +54,28 @@ fileprivate extension TrendingRepoListViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+    func bindViews() {
+        viewModel.reloadTableView = {[weak self] in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 }
 
-//extension TrendingRepoListViewController: UITableViewDelegate, UITableViewDataSource {
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//    }
-//}
+extension TrendingRepoListViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.getNumberOfCells(for: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellForRowData(at: indexPath.row).reusableIdentifier, for: indexPath) as! ReusableTableViewCell
+        cell.configure(with: viewModel.cellForRowData(at: indexPath.row))
+        return cell
+    }
+}
 
 

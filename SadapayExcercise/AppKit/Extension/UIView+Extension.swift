@@ -10,6 +10,11 @@ import UIKit
 
 extension UIView {
     
+    func makeCircular() {
+        self.layer.cornerRadius = min(self.frame.size.height, self.frame.size.width) / 2.0
+        self.clipsToBounds = true
+    }
+    
     func startShimmeringEffect() {
         let gradientColorOne : CGColor = UIColor(white: 0.85, alpha: 1.0).cgColor
         let gradientColorTwo : CGColor = UIColor(white: 0.95, alpha: 0.6).cgColor
@@ -30,13 +35,13 @@ extension UIView {
         gradientLayer.add(animation, forKey: animation.keyPath)
     }
     
-    func stopShimmeringEffect() {
-        if let gradientLayer =  self.layer.sublayers?.first(where: { (layer) -> Bool in
-            return layer.isKind(of: CAGradientLayer.self)
-        })
-        {
-            gradientLayer.removeFromSuperlayer()
-        }
-        layer.mask = nil
-    }
+//    func stopShimmeringEffect() {
+//        if let gradientLayer =  self.layer.sublayers?.first(where: { (layer) -> Bool in
+//            return layer.isKind(of: CAGradientLayer.self)
+//        })
+//        {
+//            gradientLayer.removeFromSuperlayer()
+//        }
+//        layer.mask = nil
+//    }
 }

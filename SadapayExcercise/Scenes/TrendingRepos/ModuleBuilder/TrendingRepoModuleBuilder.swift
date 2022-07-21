@@ -14,7 +14,7 @@ protocol TrendingRepoModuleBuilding {
 
 final class TrendingRepoModuleBuilder: TrendingRepoModuleBuilding{
     func createModule() -> UIViewController {
-        let viewController: UIViewController = TrendingRepoListViewController(viewModel: TrendingRepoListViewModel())
+        let viewController: UIViewController = TrendingRepoListViewController(viewModel: TrendingRepoListViewModel(apiService: ApiService()))
         let navigationController = UINavigationControllerFactory.createTransparentNavigationController(rootViewController: viewController)
         return navigationController
     }

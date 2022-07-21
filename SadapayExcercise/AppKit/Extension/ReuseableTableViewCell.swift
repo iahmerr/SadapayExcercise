@@ -24,7 +24,7 @@ open class ReusableTableViewCell: UITableViewCell, ReusableView, ConfigurableTab
         super.prepareForReuse()
     }
     
-    open func configure(with manager: Any) {
+    open func configure(with viewModel: Any) {
         fatalError("Configure with viewModel must be implemented.")
     }
     
