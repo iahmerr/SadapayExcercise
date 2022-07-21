@@ -46,6 +46,8 @@
 		7BB621B32889861600DCBCB4 /* ShimmeringTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B22889861600DCBCB4 /* ShimmeringTableViewCellViewModel.swift */; };
 		7BB621B62889BBA700DCBCB4 /* TrendingRepoTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B52889BBA700DCBCB4 /* TrendingRepoTableViewCellTest.swift */; };
 		7BB621B82889D23200DCBCB4 /* UIViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B72889D23200DCBCB4 /* UIViewFactory.swift */; };
+		7BB621BA2889ED6800DCBCB4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B92889ED6800DCBCB4 /* UIImage+Extension.swift */; };
+		7BB621BD2889EDA600DCBCB4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BB621BC2889EDA600DCBCB4 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,7 @@
 		7BB621B22889861600DCBCB4 /* ShimmeringTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		7BB621B52889BBA700DCBCB4 /* TrendingRepoTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCellTest.swift; sourceTree = "<group>"; };
 		7BB621B72889D23200DCBCB4 /* UIViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFactory.swift; sourceTree = "<group>"; };
+		7BB621B92889ED6800DCBCB4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB621BD2889EDA600DCBCB4 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +239,7 @@
 				7BB6215D2888EFC300DCBCB4 /* AppFont */,
 				7BB6215A2888EEB400DCBCB4 /* Extension */,
 				7BB6214D2888EDBE00DCBCB4 /* UIFactories */,
+				7BB621B92889ED6800DCBCB4 /* UIImage+Extension.swift */,
 			);
 			path = AppKit;
 			sourceTree = "<group>";
@@ -385,6 +390,9 @@
 			dependencies = (
 			);
 			name = SadapayExcercise;
+			packageProductDependencies = (
+				7BB621BC2889EDA600DCBCB4 /* SDWebImage */,
+			);
 			productName = SadapayExcercise;
 			productReference = 7BB621112888EB6100DCBCB4 /* SadapayExcercise.app */;
 			productType = "com.apple.product-type.application";
@@ -457,6 +465,9 @@
 				Base,
 			);
 			mainGroup = 7BB621082888EB6000DCBCB4;
+			packageReferences = (
+				7BB621BB2889EDA600DCBCB4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 7BB621122888EB6100DCBCB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -516,6 +527,7 @@
 				7BB621692888FA1900DCBCB4 /* TrendingRepoListViewController.swift in Sources */,
 				7BB621642888F6B300DCBCB4 /* TrendingRepoViewModel.swift in Sources */,
 				7BB6218D288965DD00DCBCB4 /* GitReposResponse.swift in Sources */,
+				7BB621BA2889ED6800DCBCB4 /* UIImage+Extension.swift in Sources */,
 				7BB6215C2888EEC900DCBCB4 /* ReuseableTableViewCell.swift in Sources */,
 				7BB621492888ECE400DCBCB4 /* TrendingRepoModuleBuilder.swift in Sources */,
 				7BB621AC2889789A00DCBCB4 /* TrendingRepoTableViewCell.swift in Sources */,
@@ -866,6 +878,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BB621BB2889EDA600DCBCB4 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BB621BC2889EDA600DCBCB4 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BB621BB2889EDA600DCBCB4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BB621092888EB6000DCBCB4 /* Project object */;
 }

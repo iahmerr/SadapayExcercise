@@ -29,13 +29,13 @@ class TrendingRepoTableViewCellTest: XCTestCase {
         
         sut?.postDataClosure = {val1, val2, val3, val4 in
             XCTAssertNotNil(val1)
-            XCTAssertEqual(val1, "LayaAir")
+            XCTAssertEqual(val1, "Repo Name: LayaAir")
             XCTAssertNotNil(val2)
-            XCTAssertEqual(val2, "TypeScript")
+            XCTAssertEqual(val2, "Language: TypeScript")
             XCTAssertNotNil(val3)
-            XCTAssertEqual(val3, "1141")
+            XCTAssertEqual(val3, " ⭐️ 1141")
             XCTAssertNotNil(val4)
-            XCTAssertEqual(val4, "https://avatars.githubusercontent.com/u/11814868?v=4")
+            XCTAssertEqual(val4,URL(string: "https://avatars.githubusercontent.com/u/11814868?v=4"))
         }
         sut?.fetchData()
     }

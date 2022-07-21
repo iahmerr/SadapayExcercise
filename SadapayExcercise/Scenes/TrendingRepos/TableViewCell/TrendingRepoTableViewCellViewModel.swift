@@ -9,14 +9,14 @@ import Foundation
 
 protocol TrendingRepoTableViewCellViewModelType {
     func fetchData()
-    var postDataClosure: ((String?, String?, String?, String?)->Void )? { get set }
+    var postDataClosure: ((String?, String?, String?, URL?)->Void )? { get set }
 }
 
 class TrendingRepoTableViewCellViewModel: TrendingRepoTableViewCellViewModelType, ReusableTableViewCellViewModelType {
     
     
     //MARK: outputs
-    var postDataClosure: ((String?, String?, String?, String?)->Void )?
+    var postDataClosure: ((String?, String?, String?, URL?)->Void )?
     
     var reusableIdentifier: String { TrendingRepoTableViewCell.reuseIdentifier }
     private let item: Items
@@ -28,6 +28,6 @@ class TrendingRepoTableViewCellViewModel: TrendingRepoTableViewCellViewModelType
 extension TrendingRepoTableViewCellViewModel {
     
     func fetchData() {
-        postDataClosure?(item.name,item.language, "\(item.stargazers_count)", item.owner?.avatar_url)
+        postDataClosure?("Repo Name: \(item.name ?? "")","Language: \(item.language ?? "" )", " ⭐️ \(item.stargazers_count)", URL(string: (item.owner?.avatar_url)!))
     }
 }

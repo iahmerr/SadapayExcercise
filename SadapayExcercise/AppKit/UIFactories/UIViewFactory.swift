@@ -10,9 +10,9 @@ import UIKit
 
 public final class UIViewFactory {
     
-    public class func createUIView()-> UIView{
+    public class func createUIView(backgroundColor: UIColor = .white)-> UIView{
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = backgroundColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }
