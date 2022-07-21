@@ -27,6 +27,8 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
     
     lazy var stack: UIStackView = UIStackViewFactory.createStackView(with: .vertical, alignment: .fill, distribution: .fillEqually, spacing: 5, arrangedSubviews: [fullName, languageName, starsLabel])
     
+    lazy var seperatorView = UIViewFactory.createUIView(backgroundColor: .darkGray)
+    
     private var viewModel: TrendingRepoTableViewCellViewModelType!
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -57,7 +59,7 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
 extension TrendingRepoTableViewCell {
     func setupViews() {
         backgroundColor = .white
-        [profileImage,stack].forEach(addSubview)
+        [profileImage,stack, seperatorView].forEach(addSubview)
     }
     
     func setupConstraints() {
@@ -71,7 +73,12 @@ extension TrendingRepoTableViewCell {
             stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.stackTrailingAnchor),
             stack.topAnchor.constraint(equalTo: topAnchor, constant: Constants.stackTopAnchor),
             stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Constants.stackBottomAnchor),
-            stack.heightAnchor.constraint(equalToConstant: Constants.stackHeightAnchor)
+            stack.heightAnchor.constraint(equalToConstant: Constants.stackHeightAnchor),
+            
+            seperatorView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            seperatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            seperatorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            seperatorView.heightAnchor.constraint(equalToConstant: 0.5)
         ])
     }
 }
