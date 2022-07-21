@@ -18,7 +18,7 @@ public final class UINavigationControllerFactory {
         nav.navigationBar.isTranslucent = true
         nav.navigationBar.isHidden = false
         nav.modalPresentationStyle = .fullScreen
-        nav.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.Weight.medium, NSAttributedString.Key.foregroundColor: UIColor.black]
+        nav.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.regular, NSAttributedString.Key.foregroundColor: UIColor.black]
         nav.navigationBar.barStyle = barStyle ?? .default
         return nav
     }
