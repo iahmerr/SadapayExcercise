@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		7BB621152888EB6100DCBCB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621142888EB6100DCBCB4 /* AppDelegate.swift */; };
 		7BB621172888EB6100DCBCB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621162888EB6100DCBCB4 /* SceneDelegate.swift */; };
-		7BB621192888EB6100DCBCB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621182888EB6100DCBCB4 /* ViewController.swift */; };
-		7BB6211C2888EB6100DCBCB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB6211A2888EB6100DCBCB4 /* Main.storyboard */; };
+		7BB621192888EB6100DCBCB4 /* TrendingRepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621182888EB6100DCBCB4 /* TrendingRepoListViewController.swift */; };
 		7BB6211E2888EB6300DCBCB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB6211D2888EB6300DCBCB4 /* Assets.xcassets */; };
 		7BB621212888EB6300DCBCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB6211F2888EB6300DCBCB4 /* LaunchScreen.storyboard */; };
 		7BB6212C2888EB6300DCBCB4 /* SadapayExcerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6212B2888EB6300DCBCB4 /* SadapayExcerciseTests.swift */; };
 		7BB621362888EB6300DCBCB4 /* SadapayExcerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621352888EB6300DCBCB4 /* SadapayExcerciseUITests.swift */; };
 		7BB621382888EB6300DCBCB4 /* SadapayExcerciseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621372888EB6300DCBCB4 /* SadapayExcerciseUITestsLaunchTests.swift */; };
+		7BB621492888ECE400DCBCB4 /* TrendingRepoModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621482888ECE400DCBCB4 /* TrendingRepoModuleBuilder.swift */; };
+		7BB6214F2888EDC600DCBCB4 /* UIButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6214E2888EDC600DCBCB4 /* UIButtonFactory.swift */; };
+		7BB621512888EDCC00DCBCB4 /* UIImageViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621502888EDCC00DCBCB4 /* UIImageViewFactory.swift */; };
+		7BB621532888EDD000DCBCB4 /* UILabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621522888EDD000DCBCB4 /* UILabelFactory.swift */; };
+		7BB621552888EDD300DCBCB4 /* UIStackViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621542888EDD300DCBCB4 /* UIStackViewFactory.swift */; };
+		7BB621572888EDD600DCBCB4 /* UINavigationControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621562888EDD600DCBCB4 /* UINavigationControllerFactory.swift */; };
+		7BB621592888EDDA00DCBCB4 /* UITableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621582888EDDA00DCBCB4 /* UITableViewFactory.swift */; };
+		7BB6215C2888EEC900DCBCB4 /* ReuseableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6215B2888EEC900DCBCB4 /* ReuseableTableViewCell.swift */; };
+		7BB6215F2888EFEE00DCBCB4 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6215E2888EFEE00DCBCB4 /* AppFont.swift */; };
+		7BB621622888F03700DCBCB4 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621612888F03700DCBCB4 /* AppTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +48,7 @@
 		7BB621112888EB6100DCBCB4 /* SadapayExcercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SadapayExcercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB621142888EB6100DCBCB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BB621162888EB6100DCBCB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7BB621182888EB6100DCBCB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7BB6211B2888EB6100DCBCB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BB621182888EB6100DCBCB4 /* TrendingRepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoListViewController.swift; sourceTree = "<group>"; };
 		7BB6211D2888EB6300DCBCB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BB621202888EB6300DCBCB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BB621222888EB6300DCBCB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +57,16 @@
 		7BB621312888EB6300DCBCB4 /* SadapayExcerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadapayExcerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB621352888EB6300DCBCB4 /* SadapayExcerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadapayExcerciseUITests.swift; sourceTree = "<group>"; };
 		7BB621372888EB6300DCBCB4 /* SadapayExcerciseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadapayExcerciseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BB621482888ECE400DCBCB4 /* TrendingRepoModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoModuleBuilder.swift; sourceTree = "<group>"; };
+		7BB6214E2888EDC600DCBCB4 /* UIButtonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonFactory.swift; sourceTree = "<group>"; };
+		7BB621502888EDCC00DCBCB4 /* UIImageViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewFactory.swift; sourceTree = "<group>"; };
+		7BB621522888EDD000DCBCB4 /* UILabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelFactory.swift; sourceTree = "<group>"; };
+		7BB621542888EDD300DCBCB4 /* UIStackViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewFactory.swift; sourceTree = "<group>"; };
+		7BB621562888EDD600DCBCB4 /* UINavigationControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerFactory.swift; sourceTree = "<group>"; };
+		7BB621582888EDDA00DCBCB4 /* UITableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewFactory.swift; sourceTree = "<group>"; };
+		7BB6215B2888EEC900DCBCB4 /* ReuseableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableTableViewCell.swift; sourceTree = "<group>"; };
+		7BB6215E2888EFEE00DCBCB4 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		7BB621612888F03700DCBCB4 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +117,9 @@
 		7BB621132888EB6100DCBCB4 /* SadapayExcercise */ = {
 			isa = PBXGroup;
 			children = (
-				7BB621142888EB6100DCBCB4 /* AppDelegate.swift */,
-				7BB621162888EB6100DCBCB4 /* SceneDelegate.swift */,
-				7BB621182888EB6100DCBCB4 /* ViewController.swift */,
-				7BB6211A2888EB6100DCBCB4 /* Main.storyboard */,
+				7BB6214A2888ED7900DCBCB4 /* AppKit */,
+				7BB621452888EC9C00DCBCB4 /* Scenes */,
+				7BB621442888EC8600DCBCB4 /* AppLifeCycle */,
 				7BB6211D2888EB6300DCBCB4 /* Assets.xcassets */,
 				7BB6211F2888EB6300DCBCB4 /* LaunchScreen.storyboard */,
 				7BB621222888EB6300DCBCB4 /* Info.plist */,
@@ -125,6 +142,88 @@
 				7BB621372888EB6300DCBCB4 /* SadapayExcerciseUITestsLaunchTests.swift */,
 			);
 			path = SadapayExcerciseUITests;
+			sourceTree = "<group>";
+		};
+		7BB621442888EC8600DCBCB4 /* AppLifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621162888EB6100DCBCB4 /* SceneDelegate.swift */,
+				7BB621142888EB6100DCBCB4 /* AppDelegate.swift */,
+			);
+			path = AppLifeCycle;
+			sourceTree = "<group>";
+		};
+		7BB621452888EC9C00DCBCB4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621462888ECAA00DCBCB4 /* TrendingRepos */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7BB621462888ECAA00DCBCB4 /* TrendingRepos */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621472888ECC500DCBCB4 /* ModuleBuilder */,
+				7BB621182888EB6100DCBCB4 /* TrendingRepoListViewController.swift */,
+			);
+			path = TrendingRepos;
+			sourceTree = "<group>";
+		};
+		7BB621472888ECC500DCBCB4 /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621482888ECE400DCBCB4 /* TrendingRepoModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		7BB6214A2888ED7900DCBCB4 /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621602888F02A00DCBCB4 /* AppTheme */,
+				7BB6215D2888EFC300DCBCB4 /* AppFont */,
+				7BB6215A2888EEB400DCBCB4 /* Extension */,
+				7BB6214D2888EDBE00DCBCB4 /* UIFactories */,
+			);
+			path = AppKit;
+			sourceTree = "<group>";
+		};
+		7BB6214D2888EDBE00DCBCB4 /* UIFactories */ = {
+			isa = PBXGroup;
+			children = (
+				7BB6214E2888EDC600DCBCB4 /* UIButtonFactory.swift */,
+				7BB621502888EDCC00DCBCB4 /* UIImageViewFactory.swift */,
+				7BB621522888EDD000DCBCB4 /* UILabelFactory.swift */,
+				7BB621542888EDD300DCBCB4 /* UIStackViewFactory.swift */,
+				7BB621562888EDD600DCBCB4 /* UINavigationControllerFactory.swift */,
+				7BB621582888EDDA00DCBCB4 /* UITableViewFactory.swift */,
+			);
+			path = UIFactories;
+			sourceTree = "<group>";
+		};
+		7BB6215A2888EEB400DCBCB4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7BB6215B2888EEC900DCBCB4 /* ReuseableTableViewCell.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7BB6215D2888EFC300DCBCB4 /* AppFont */ = {
+			isa = PBXGroup;
+			children = (
+				7BB6215E2888EFEE00DCBCB4 /* AppFont.swift */,
+			);
+			path = AppFont;
+			sourceTree = "<group>";
+		};
+		7BB621602888F02A00DCBCB4 /* AppTheme */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621612888F03700DCBCB4 /* AppTheme.swift */,
+			);
+			path = AppTheme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +332,6 @@
 			files = (
 				7BB621212888EB6300DCBCB4 /* LaunchScreen.storyboard in Resources */,
 				7BB6211E2888EB6300DCBCB4 /* Assets.xcassets in Resources */,
-				7BB6211C2888EB6100DCBCB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +356,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BB621192888EB6100DCBCB4 /* ViewController.swift in Sources */,
+				7BB6214F2888EDC600DCBCB4 /* UIButtonFactory.swift in Sources */,
+				7BB621572888EDD600DCBCB4 /* UINavigationControllerFactory.swift in Sources */,
+				7BB621532888EDD000DCBCB4 /* UILabelFactory.swift in Sources */,
+				7BB621622888F03700DCBCB4 /* AppTheme.swift in Sources */,
+				7BB621552888EDD300DCBCB4 /* UIStackViewFactory.swift in Sources */,
+				7BB6215C2888EEC900DCBCB4 /* ReuseableTableViewCell.swift in Sources */,
+				7BB621492888ECE400DCBCB4 /* TrendingRepoModuleBuilder.swift in Sources */,
+				7BB621192888EB6100DCBCB4 /* TrendingRepoListViewController.swift in Sources */,
+				7BB621592888EDDA00DCBCB4 /* UITableViewFactory.swift in Sources */,
+				7BB6215F2888EFEE00DCBCB4 /* AppFont.swift in Sources */,
 				7BB621152888EB6100DCBCB4 /* AppDelegate.swift in Sources */,
 				7BB621172888EB6100DCBCB4 /* SceneDelegate.swift in Sources */,
+				7BB621512888EDCC00DCBCB4 /* UIImageViewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +405,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7BB6211A2888EB6100DCBCB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BB6211B2888EB6100DCBCB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7BB6211F2888EB6300DCBCB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +542,7 @@
 				INFOPLIST_FILE = SadapayExcercise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,7 +554,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,7 +570,7 @@
 				INFOPLIST_FILE = SadapayExcercise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +582,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
