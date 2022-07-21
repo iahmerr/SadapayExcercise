@@ -13,6 +13,8 @@ protocol TrendingRepoListViewModelInput {
 
 protocol TrendingRepoListViewModelOutput {
     func getTitle() -> String
+    func getNumberOfCells(for section: Int)-> Int
+    func cellForRowData(at index: Int) -> String
 }
 
 protocol TrendingRepoListViewModelType {
@@ -25,6 +27,8 @@ final class TrendingRepoListViewModel: TrendingRepoListViewModelInput, TrendingR
     var inputs: TrendingRepoListViewModelInput { return self }
     var outputs: TrendingRepoListViewModelOutput { return self }
     
+    var dataSourceArray: [String] = []
+    
     init() {}
     
 }
@@ -34,4 +38,13 @@ extension TrendingRepoListViewModel {
     func getTitle() -> String {
         return "Trending Repo"
     }
+    
+    func getNumberOfCells(for section: Int) -> Int {
+        return dataSourceArray.count
+    }
+    
+    func cellForRowData(at index: Int) -> String {
+        dataSourceArray[index]
+    }
+    
 }

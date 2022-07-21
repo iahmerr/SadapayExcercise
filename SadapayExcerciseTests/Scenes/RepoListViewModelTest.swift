@@ -16,5 +16,9 @@ class RepoListViewModelTest: XCTestCase {
         XCTAssertNotNil(sut.getTitle())
         XCTAssertEqual(sut.getTitle(), "Trending Repo")
     }
-
+    
+    func test_TableViewNumOfCells() {
+        XCTAssertNotNil(sut.getNumberOfCells(for:0))
+        XCTAssertEqual(sut.getNumberOfCells(for: 0), 0)
+    }
 }
