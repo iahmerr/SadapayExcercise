@@ -28,7 +28,6 @@ final class TrendingRepoListViewModel: TrendingRepoListViewModelType {
         self.apiService = apiService
         createShimmerCells()
     }
-    
 }
 //MARK: output functions
 extension TrendingRepoListViewModel {
