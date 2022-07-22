@@ -13,11 +13,14 @@ protocol TrendingRepoListViewModelType {
     func getNumberOfCells(for section: Int)-> Int
     func cellForRowData(at index: Int) -> ReusableTableViewCellViewModelType
     var reloadTableView: (()-> Void)? { get set }
+    var showErrorView: (()-> Void)? { get set }
+    func createShimmerCells()
 }
 
 final class TrendingRepoListViewModel: TrendingRepoListViewModelType {
      
     var reloadTableView: (()-> Void)?
+    var showErrorView: (()-> Void)?
     var dataSourceArray: [ReusableTableViewCellViewModelType] = []
     private let apiService: GitRepoService
     
@@ -51,8 +54,8 @@ extension TrendingRepoListViewModel {
             switch result {
             case .success(let response):
                 self.createTableViewCells(response: response)
-            case .failure(let fail):
-                print(fail.error)
+            case .failure(_):
+                self.showErrorView?()
             }
         }
     }
@@ -60,7 +63,7 @@ extension TrendingRepoListViewModel {
 
 extension TrendingRepoListViewModel {
     
-    private func createShimmerCells() {
+    func createShimmerCells() {
         dataSourceArray = []
         for _ in 0...10 {
             dataSourceArray.append(ShimmeringTableViewCellViewModel())

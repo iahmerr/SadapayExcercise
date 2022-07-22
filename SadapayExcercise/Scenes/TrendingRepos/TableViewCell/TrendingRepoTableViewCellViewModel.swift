@@ -12,7 +12,7 @@ protocol TrendingRepoTableViewCellViewModelType {
     var postDataClosure: ((String?,String?,String?, String?, URL?)->Void )? { get set }
 }
 
-class TrendingRepoTableViewCellViewModel: TrendingRepoTableViewCellViewModelType, ReusableTableViewCellViewModelType {
+final class TrendingRepoTableViewCellViewModel: TrendingRepoTableViewCellViewModelType, ReusableTableViewCellViewModelType {
     
     
     //MARK: outputs

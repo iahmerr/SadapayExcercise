@@ -11,7 +11,7 @@ protocol ApiRequest: AnyObject {
     func performRequest<T:Decodable>(router: URLRequestConvertible, completionHandler: @escaping (Result<T,AppError>) -> Void)
 }
 
-class APIClient {
+final class APIClient {
     
     private let session = URLSession(configuration: .default)
     private func fetchFeed(request : URLRequest?, completion: @escaping (Result<Data,AppError>) -> Void) {

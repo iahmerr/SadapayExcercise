@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 extension UIView {
     
@@ -43,5 +44,16 @@ extension UIView {
             gradientLayer.removeFromSuperlayer()
         }
         layer.mask = nil
+    }
+    
+    func showAnimation(aimationName: String, animationShouldLoop: Bool = true, animationSpeed:CGFloat = 2 ) {
+        
+        let starAnimationView = AnimationView(name: aimationName)
+        starAnimationView.frame = bounds
+        addSubview(starAnimationView)
+        starAnimationView.contentMode = .scaleAspectFill
+        starAnimationView.loopMode = animationShouldLoop ? .loop : .playOnce
+        starAnimationView.animationSpeed = animationSpeed
+        starAnimationView.play()
     }
 }

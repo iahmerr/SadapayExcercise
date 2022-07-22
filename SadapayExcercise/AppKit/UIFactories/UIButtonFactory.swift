@@ -16,7 +16,7 @@ public final class UIButtonFactory {
         button.setTitle(title, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = backgroundColor
-        button.titleLabel?.textColor = textColor
+        button.setTitleColor(textColor, for: .normal)
         button.imageView?.contentMode = .scaleAspectFill
         return button
     }

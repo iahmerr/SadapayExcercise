@@ -7,7 +7,13 @@
 
 import UIKit
 
-class TrendingRepoListViewController: UIViewController {
+final class TrendingRepoListViewController: UIViewController {
+    
+    private lazy var errorView : ErrorView = {
+        let error = ErrorView()
+        error.translatesAutoresizingMaskIntoConstraints = false
+        return error
+    }()
     
     //MARK: UI Elements
     lazy var tableView: UITableView = UITableViewFactory.createUITableView(seperatorStyle: .none, showsVerticalScrollIndicator: false)
@@ -24,12 +30,12 @@ class TrendingRepoListViewController: UIViewController {
         self.title = viewModel.getTitle()
         setupViews()
         setupConstraints()
-        bindViews()
     }
     
     init(viewModel: TrendingRepoListViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        bindViews()
         viewModel.fetchGitRepos()
     }
     
@@ -62,6 +68,34 @@ fileprivate extension TrendingRepoListViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        viewModel.showErrorView = {[weak self] in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.showNetworkError()
+                self.errorView.startAnimating()
+            }
+        }
+    }
+    
+    func showNetworkError() {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        view.addSubview(errorView)
+        
+        errorView.retryPressedClosure = { [weak self] in
+            guard let self = self else { return }
+            self.errorView.removeFromSuperview()
+            self.viewModel.createShimmerCells()
+            self.viewModel.fetchGitRepos()
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+        
+        NSLayoutConstraint.activate([
+            errorView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            errorView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            errorView.topAnchor.constraint(equalTo: view.topAnchor),
+            errorView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
     }
 }
 

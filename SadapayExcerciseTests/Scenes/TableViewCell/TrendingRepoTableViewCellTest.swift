@@ -16,7 +16,6 @@ class TrendingRepoTableViewCellTest: XCTestCase {
         let mockedData = APIServiceMocked()
         mockedData.getGitTrendingRepo {[weak self] result in
             switch result {
-                
             case .success(let response):
                 self?.sut = TrendingRepoTableViewCellViewModel(item: response.items![0])
             case .failure(let error):

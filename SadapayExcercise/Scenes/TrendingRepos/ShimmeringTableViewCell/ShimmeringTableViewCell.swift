@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ShimmeringTableViewCell: ReusableTableViewCell {
+final class ShimmeringTableViewCell: ReusableTableViewCell {
     
     private enum Constants {
         static let profileImageViewLeadingAnchor: CGFloat = 20

@@ -50,6 +50,8 @@
 		7BB621BD2889EDA600DCBCB4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BB621BC2889EDA600DCBCB4 /* SDWebImage */; };
 		7BB621BF288A03C000DCBCB4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621BE288A03C000DCBCB4 /* UIColor+Extension.swift */; };
 		7BB621C1288ACB7700DCBCB4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621C0288ACB7700DCBCB4 /* ErrorView.swift */; };
+		7BB621C4288AE82B00DCBCB4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7BB621C3288AE82B00DCBCB4 /* Lottie */; };
+		7BB621C8288AF7CE00DCBCB4 /* network_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BB621C7288AF7CE00DCBCB4 /* network_error.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,7 @@
 		7BB621B92889ED6800DCBCB4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		7BB621BE288A03C000DCBCB4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7BB621C0288ACB7700DCBCB4 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		7BB621C7288AF7CE00DCBCB4 /* network_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = network_error.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB621BD2889EDA600DCBCB4 /* SDWebImage in Frameworks */,
+				7BB621C4288AE82B00DCBCB4 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,14 +171,13 @@
 		7BB621132888EB6100DCBCB4 /* SadapayExcercise */ = {
 			isa = PBXGroup;
 			children = (
+				7BB621C9288B2E3C00DCBCB4 /* Storyboard */,
 				7BB6217B288915F700DCBCB4 /* Network */,
 				7BB6218B288965C000DCBCB4 /* ResponseModels */,
 				7BB621442888EC8600DCBCB4 /* AppLifeCycle */,
 				7BB6214A2888ED7900DCBCB4 /* AppKit */,
 				7BB621452888EC9C00DCBCB4 /* Scenes */,
-				7BB6211D2888EB6300DCBCB4 /* Assets.xcassets */,
-				7BB6211F2888EB6300DCBCB4 /* LaunchScreen.storyboard */,
-				7BB621222888EB6300DCBCB4 /* Info.plist */,
+				7BB621CA288B2E4A00DCBCB4 /* Resources */,
 			);
 			path = SadapayExcercise;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 		7BB6214A2888ED7900DCBCB4 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				7BB621C6288AF74A00DCBCB4 /* Resources */,
 				7BB621832889275B00DCBCB4 /* Utility */,
 				7BB621602888F02A00DCBCB4 /* AppTheme */,
 				7BB6215D2888EFC300DCBCB4 /* AppFont */,
@@ -269,7 +273,6 @@
 				7BB621792889116800DCBCB4 /* ReusableTableViewCellViewModelType.swift */,
 				7BB621992889762C00DCBCB4 /* UIView+Extension.swift */,
 				7BB621BE288A03C000DCBCB4 /* UIColor+Extension.swift */,
-				7BB621C0288ACB7700DCBCB4 /* ErrorView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 		7BB621832889275B00DCBCB4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				7BB621C0288ACB7700DCBCB4 /* ErrorView.swift */,
 				7BB621842889276600DCBCB4 /* AppError.swift */,
 			);
 			path = Utility;
@@ -380,6 +384,31 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		7BB621C6288AF74A00DCBCB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621C7288AF7CE00DCBCB4 /* network_error.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7BB621C9288B2E3C00DCBCB4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7BB6211F2888EB6300DCBCB4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		7BB621CA288B2E4A00DCBCB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7BB621222888EB6300DCBCB4 /* Info.plist */,
+				7BB6211D2888EB6300DCBCB4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +427,7 @@
 			name = SadapayExcercise;
 			packageProductDependencies = (
 				7BB621BC2889EDA600DCBCB4 /* SDWebImage */,
+				7BB621C3288AE82B00DCBCB4 /* Lottie */,
 			);
 			productName = SadapayExcercise;
 			productReference = 7BB621112888EB6100DCBCB4 /* SadapayExcercise.app */;
@@ -473,6 +503,7 @@
 			mainGroup = 7BB621082888EB6000DCBCB4;
 			packageReferences = (
 				7BB621BB2889EDA600DCBCB4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				7BB621C2288AE82B00DCBCB4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 7BB621122888EB6100DCBCB4 /* Products */;
 			projectDirPath = "";
@@ -491,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB621212888EB6300DCBCB4 /* LaunchScreen.storyboard in Resources */,
+				7BB621C8288AF7CE00DCBCB4 /* network_error.json in Resources */,
 				7BB6211E2888EB6300DCBCB4 /* Assets.xcassets in Resources */,
 				7BB6219228896C1600DCBCB4 /* TrendingRepoResponse.json in Resources */,
 			);
@@ -650,7 +682,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -704,7 +736,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -726,7 +758,7 @@
 				INFOPLIST_FILE = SadapayExcercise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -754,7 +786,7 @@
 				INFOPLIST_FILE = SadapayExcercise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -896,6 +928,14 @@
 				kind = branch;
 			};
 		};
+		7BB621C2288AE82B00DCBCB4 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -903,6 +943,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7BB621BB2889EDA600DCBCB4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		7BB621C3288AE82B00DCBCB4 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BB621C2288AE82B00DCBCB4 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
