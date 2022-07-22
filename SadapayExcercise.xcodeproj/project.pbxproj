@@ -243,7 +243,6 @@
 				7BB6215D2888EFC300DCBCB4 /* AppFont */,
 				7BB6215A2888EEB400DCBCB4 /* Extension */,
 				7BB6214D2888EDBE00DCBCB4 /* UIFactories */,
-				7BB621B92889ED6800DCBCB4 /* UIImage+Extension.swift */,
 			);
 			path = AppKit;
 			sourceTree = "<group>";
@@ -265,6 +264,7 @@
 		7BB6215A2888EEB400DCBCB4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7BB621B92889ED6800DCBCB4 /* UIImage+Extension.swift */,
 				7BB6215B2888EEC900DCBCB4 /* ReuseableTableViewCell.swift */,
 				7BB621792889116800DCBCB4 /* ReusableTableViewCellViewModelType.swift */,
 				7BB621992889762C00DCBCB4 /* UIView+Extension.swift */,

@@ -14,7 +14,7 @@ class RepoListViewModelTest: XCTestCase {
     
     func test_ControllerTitle() {
         XCTAssertNotNil(sut.getTitle())
-        XCTAssertEqual(sut.getTitle(), "Trending Repo")
+        XCTAssertEqual(sut.getTitle(), "Trending")
     }
     
     func test_ShimmeringCells() {

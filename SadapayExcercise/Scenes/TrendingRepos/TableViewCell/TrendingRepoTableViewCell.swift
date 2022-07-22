@@ -12,11 +12,10 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
     private enum Constants {
         static let profileImageLeadingAnchor: CGFloat = 20
         static let profileImageHeightAnchor: CGFloat = 45
-        static let stackLeadingAnchor: CGFloat = 35
-        static let stackTrailingAnchor: CGFloat = -10
-        static let stackTopAnchor: CGFloat = 20
-        static let stackBottomAnchor: CGFloat = -20
-        static let stackHeightAnchor: CGFloat = 80
+        static let mainStackLeadingAnchor: CGFloat = 35
+        static let mainStackTrailingAnchor: CGFloat = -10
+        static let mainStackTopAnchor: CGFloat = 20
+        static let mainStackBottomAnchor: CGFloat = -20
         static let seperatorViewLeadingAnchor: CGFloat = 15
         static let seperatorViewTrailingAnchor: CGFloat = -15
         static let seperatorViewHeightAnchor: CGFloat = 0.5
@@ -24,11 +23,19 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
     
     //MARK: UIElements
     let profileImage: UIImageView = UIImageViewFactory.createImageView(mode: .scaleToFill)
-    lazy var languageName = UILabelFactory.createUILabel(with: .darkGray, textStyle: .small, fontWeight: .regular, alignment: .left, numberOfLines: 0)
+    
     lazy var fullName = UILabelFactory.createUILabel(with: UIColor.color_black_white, textStyle: .regular, alignment: .left, numberOfLines: 0)
+    
+    lazy var descriptionLabel: UILabel = UILabelFactory.createUILabel(with: .gray, textStyle: .small, numberOfLines: 0)
+    
+    lazy var languageName = UILabelFactory.createUILabel(with: .darkGray, textStyle: .small, fontWeight: .regular, alignment: .left, numberOfLines: 0)
+    
     lazy var starsLabel: UILabel = UILabelFactory.createUILabel(with: .gray, textStyle: .small)
     
-    lazy var stack: UIStackView = UIStackViewFactory.createStackView(with: .vertical, alignment: .fill, distribution: .fillEqually, spacing: 5, arrangedSubviews: [fullName, languageName, starsLabel])
+    lazy var bottomStack: UIStackView = UIStackViewFactory.createStackView(with: .horizontal, alignment: .fill, distribution: .fill, spacing: 15, arrangedSubviews: [languageName, starsLabel])
+    
+    lazy var mainStack: UIStackView = UIStackViewFactory.createStackView(with: .vertical, alignment: .fill, distribution: .fill, spacing: 5, arrangedSubviews: [fullName, descriptionLabel, bottomStack])
+    
     
     lazy var seperatorView = UIViewFactory.createUIView(backgroundColor: .darkGray)
     
@@ -42,9 +49,8 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         profileImage.makeCircular()
     }
     
@@ -61,7 +67,8 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
 extension TrendingRepoTableViewCell {
     func setupViews() {
         backgroundColor = UIColor.color_white_black
-        [profileImage,stack, seperatorView].forEach(addSubview)
+        profileImage.backgroundColor = UIColor.color_black_white
+        [profileImage,mainStack, seperatorView].forEach(addSubview)
     }
     
     func setupConstraints() {
@@ -71,11 +78,10 @@ extension TrendingRepoTableViewCell {
             profileImage.heightAnchor.constraint(equalToConstant: Constants.profileImageHeightAnchor),
             profileImage.widthAnchor.constraint(equalTo: profileImage.heightAnchor),
             
-            stack.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor, constant: Constants.stackLeadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.stackTrailingAnchor),
-            stack.topAnchor.constraint(equalTo: topAnchor, constant: Constants.stackTopAnchor),
-            stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Constants.stackBottomAnchor),
-            stack.heightAnchor.constraint(equalToConstant: Constants.stackHeightAnchor),
+            mainStack.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor, constant: Constants.mainStackLeadingAnchor),
+            mainStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.mainStackTrailingAnchor),
+            mainStack.topAnchor.constraint(equalTo: topAnchor, constant: Constants.mainStackTopAnchor),
+            mainStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Constants.mainStackBottomAnchor),
             
             seperatorView.bottomAnchor.constraint(equalTo: bottomAnchor),
             seperatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.seperatorViewLeadingAnchor),
@@ -88,12 +94,13 @@ extension TrendingRepoTableViewCell {
 extension TrendingRepoTableViewCell {
     
     func bindViews(){
-        viewModel.postDataClosure = {[weak self] val1,val2, val3, val4 in
+        viewModel.postDataClosure = {[weak self] val1,val2, val3, val4, val5 in
             guard let self = self else { return }
             self.fullName.text = val1
-            self.languageName.text = val2
-            self.starsLabel.text = val3
-            self.profileImage.loadImage(with: val4, showsIndicator: true)
+            self.descriptionLabel.text = val2
+            self.languageName.text = val3
+            self.starsLabel.text = val4
+            self.profileImage.loadImage(with: val5, showsIndicator: true)
         }
     }
 }

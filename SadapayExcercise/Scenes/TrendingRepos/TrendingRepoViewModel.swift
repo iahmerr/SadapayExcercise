@@ -31,7 +31,7 @@ final class TrendingRepoListViewModel: TrendingRepoListViewModelType {
 extension TrendingRepoListViewModel {
     
     func getTitle() -> String {
-        return "Trending Repo"
+        return "Trending"
     }
     
     func getNumberOfCells(for section: Int) -> Int {
