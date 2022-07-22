@@ -35,13 +35,22 @@ extension UIView {
         gradientLayer.add(animation, forKey: animation.keyPath)
     }
     
-//    func stopShimmeringEffect() {
-//        if let gradientLayer =  self.layer.sublayers?.first(where: { (layer) -> Bool in
-//            return layer.isKind(of: CAGradientLayer.self)
-//        })
-//        {
-//            gradientLayer.removeFromSuperlayer()
-//        }
-//        layer.mask = nil
-//    }
+    func stopShimmeringEffect() {
+        if let gradientLayer =  self.layer.sublayers?.first(where: { (layer) -> Bool in
+            return layer.isKind(of: CAGradientLayer.self)
+        })
+        {
+            gradientLayer.removeFromSuperlayer()
+        }
+        layer.mask = nil
+    }
+    
+    func applyShadow() {
+        layer.shadowRadius = 7
+        layer.shadowOpacity = 0.15
+        layer.shadowOffset = .zero
+        layer.masksToBounds = false
+        backgroundColor = UIColor.color_white_black
+        layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+    }
 }

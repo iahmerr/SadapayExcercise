@@ -48,6 +48,7 @@
 		7BB621B82889D23200DCBCB4 /* UIViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B72889D23200DCBCB4 /* UIViewFactory.swift */; };
 		7BB621BA2889ED6800DCBCB4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621B92889ED6800DCBCB4 /* UIImage+Extension.swift */; };
 		7BB621BD2889EDA600DCBCB4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BB621BC2889EDA600DCBCB4 /* SDWebImage */; };
+		7BB621BF288A03C000DCBCB4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB621BE288A03C000DCBCB4 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		7BB621B52889BBA700DCBCB4 /* TrendingRepoTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCellTest.swift; sourceTree = "<group>"; };
 		7BB621B72889D23200DCBCB4 /* UIViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFactory.swift; sourceTree = "<group>"; };
 		7BB621B92889ED6800DCBCB4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		7BB621BE288A03C000DCBCB4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 				7BB6215B2888EEC900DCBCB4 /* ReuseableTableViewCell.swift */,
 				7BB621792889116800DCBCB4 /* ReusableTableViewCellViewModelType.swift */,
 				7BB621992889762C00DCBCB4 /* UIView+Extension.swift */,
+				7BB621BE288A03C000DCBCB4 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				7BB6215C2888EEC900DCBCB4 /* ReuseableTableViewCell.swift in Sources */,
 				7BB621492888ECE400DCBCB4 /* TrendingRepoModuleBuilder.swift in Sources */,
 				7BB621AC2889789A00DCBCB4 /* TrendingRepoTableViewCell.swift in Sources */,
+				7BB621BF288A03C000DCBCB4 /* UIColor+Extension.swift in Sources */,
 				7BB621592888EDDA00DCBCB4 /* UITableViewFactory.swift in Sources */,
 				7BB6217D2889162200DCBCB4 /* Endpoint.swift in Sources */,
 				7BB6215F2888EFEE00DCBCB4 /* AppFont.swift in Sources */,
