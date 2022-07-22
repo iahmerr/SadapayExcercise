@@ -44,13 +44,4 @@ extension UIView {
         }
         layer.mask = nil
     }
-    
-    func applyShadow() {
-        layer.shadowRadius = 7
-        layer.shadowOpacity = 0.15
-        layer.shadowOffset = .zero
-        layer.masksToBounds = false
-        backgroundColor = UIColor.color_white_black
-        layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
-    }
 }

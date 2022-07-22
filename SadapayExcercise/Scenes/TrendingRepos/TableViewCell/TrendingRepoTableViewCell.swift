@@ -11,25 +11,26 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
     
     private enum Constants {
         static let profileImageLeadingAnchor: CGFloat = 20
-        static let profileImageHeightAnchor: CGFloat = 65
+        static let profileImageHeightAnchor: CGFloat = 45
         static let stackLeadingAnchor: CGFloat = 35
         static let stackTrailingAnchor: CGFloat = -10
         static let stackTopAnchor: CGFloat = 20
         static let stackBottomAnchor: CGFloat = -20
         static let stackHeightAnchor: CGFloat = 80
-        static let backViewAllSides: CGFloat = 5
-        static let backViewCornerRadius: CGFloat = 5
-        static let backViewBorderWidth: CGFloat = 0.3
+        static let seperatorViewLeadingAnchor: CGFloat = 15
+        static let seperatorViewTrailingAnchor: CGFloat = -15
+        static let seperatorViewHeightAnchor: CGFloat = 0.5
     }
     
     //MARK: UIElements
-    let profileImage: UIImageView = UIImageViewFactory.createImageView(mode: .scaleAspectFill)
+    let profileImage: UIImageView = UIImageViewFactory.createImageView(mode: .scaleToFill)
     lazy var languageName = UILabelFactory.createUILabel(with: .darkGray, textStyle: .small, fontWeight: .regular, alignment: .left, numberOfLines: 0)
     lazy var fullName = UILabelFactory.createUILabel(with: UIColor.color_black_white, textStyle: .regular, alignment: .left, numberOfLines: 0)
     lazy var starsLabel: UILabel = UILabelFactory.createUILabel(with: .gray, textStyle: .small)
-    lazy var backView = UIViewFactory.createUIView()
     
     lazy var stack: UIStackView = UIStackViewFactory.createStackView(with: .vertical, alignment: .fill, distribution: .fillEqually, spacing: 5, arrangedSubviews: [fullName, languageName, starsLabel])
+    
+    lazy var seperatorView = UIViewFactory.createUIView(backgroundColor: .darkGray)
     
     private var viewModel: TrendingRepoTableViewCellViewModelType!
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -43,10 +44,7 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        backView.layer.cornerRadius = Constants.backViewCornerRadius
-        backView.layer.borderColor = UIColor.color_black_white.cgColor
-        backView.applyShadow()
-        backView.layer.borderWidth = Constants.backViewBorderWidth
+        
         profileImage.makeCircular()
     }
     
@@ -63,29 +61,26 @@ final class TrendingRepoTableViewCell: ReusableTableViewCell {
 extension TrendingRepoTableViewCell {
     func setupViews() {
         backgroundColor = UIColor.color_white_black
-        backView.backgroundColor = UIColor.color_cell_background
-        profileImage.backgroundColor = UIColor.color_black_white
-        [backView].forEach(addSubview)
-        [profileImage,stack].forEach(backView.addSubview)
+        [profileImage,stack, seperatorView].forEach(addSubview)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            backView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.backViewAllSides),
-            backView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.backViewAllSides),
-            backView.topAnchor.constraint(equalTo: topAnchor, constant: Constants.backViewAllSides),
-            backView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Constants.backViewAllSides),
-            
-            profileImage.leadingAnchor.constraint(equalTo: backView.leadingAnchor, constant: Constants.profileImageLeadingAnchor),
-            profileImage.centerYAnchor.constraint(equalTo: backView.centerYAnchor),
+            profileImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.profileImageLeadingAnchor),
+            profileImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             profileImage.heightAnchor.constraint(equalToConstant: Constants.profileImageHeightAnchor),
             profileImage.widthAnchor.constraint(equalTo: profileImage.heightAnchor),
             
             stack.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor, constant: Constants.stackLeadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: backView.trailingAnchor, constant: Constants.stackTrailingAnchor),
-            stack.topAnchor.constraint(equalTo: backView.topAnchor, constant: Constants.stackTopAnchor),
-            stack.bottomAnchor.constraint(equalTo: backView.bottomAnchor, constant: Constants.stackBottomAnchor),
-            stack.heightAnchor.constraint(equalToConstant: Constants.stackHeightAnchor)
+            stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.stackTrailingAnchor),
+            stack.topAnchor.constraint(equalTo: topAnchor, constant: Constants.stackTopAnchor),
+            stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Constants.stackBottomAnchor),
+            stack.heightAnchor.constraint(equalToConstant: Constants.stackHeightAnchor),
+            
+            seperatorView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            seperatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.seperatorViewLeadingAnchor),
+            seperatorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.seperatorViewTrailingAnchor),
+            seperatorView.heightAnchor.constraint(equalToConstant: Constants.seperatorViewHeightAnchor)
         ])
     }
 }

@@ -17,7 +17,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = TrendingRepoModuleBuilder().createModule()
         window?.makeKeyAndVisible()
-        
     }
 }
 
