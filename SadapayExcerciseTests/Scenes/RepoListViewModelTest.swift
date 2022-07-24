@@ -18,6 +18,7 @@ class RepoListViewModelTest: XCTestCase {
     }
     
     func test_ShimmeringCells() {
+        sut.createShimmerCells()
         XCTAssertEqual(sut.dataSourceArray.count, 11)
         XCTAssertNotNil(sut.getNumberOfCells(for:0))
         XCTAssertEqual(sut.getNumberOfCells(for: 0), 11)

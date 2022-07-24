@@ -30,13 +30,14 @@ final class TrendingRepoListViewController: UIViewController {
         self.title = viewModel.getTitle()
         setupViews()
         setupConstraints()
+        
+        bindViews()
+        viewModel.viewHasAppeared()
     }
     
     init(viewModel: TrendingRepoListViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        bindViews()
-        viewModel.fetchGitRepos()
     }
     
     required init?(coder: NSCoder) {
@@ -44,7 +45,7 @@ final class TrendingRepoListViewController: UIViewController {
     }
 }
 
-fileprivate extension TrendingRepoListViewController {
+private extension TrendingRepoListViewController {
     
     func setupViews() {
         [tableView].forEach(view.addSubview)
@@ -77,7 +78,7 @@ fileprivate extension TrendingRepoListViewController {
             }
         }
     }
-    
+    // show and show detail view.
     func showNetworkError() {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         view.addSubview(errorView)
@@ -85,8 +86,7 @@ fileprivate extension TrendingRepoListViewController {
         errorView.retryPressedClosure = { [weak self] in
             guard let self = self else { return }
             self.errorView.removeFromSuperview()
-            self.viewModel.createShimmerCells()
-            self.viewModel.fetchGitRepos()
+            self.viewModel.viewHasAppeared()
             self.navigationController?.setNavigationBarHidden(false, animated: true)
         }
         

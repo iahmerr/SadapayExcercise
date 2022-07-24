@@ -8,13 +8,12 @@
 import Foundation
 
 protocol TrendingRepoListViewModelType {
-    func fetchGitRepos()
     func getTitle() -> String
     func getNumberOfCells(for section: Int)-> Int
     func cellForRowData(at index: Int) -> ReusableTableViewCellViewModelType
     var reloadTableView: (()-> Void)? { get set }
     var showErrorView: (()-> Void)? { get set }
-    func createShimmerCells()
+    func viewHasAppeared()
 }
 
 final class TrendingRepoListViewModel: TrendingRepoListViewModelType {
@@ -26,7 +25,6 @@ final class TrendingRepoListViewModel: TrendingRepoListViewModelType {
     
     init(apiService: GitRepoService) {
         self.apiService = apiService
-        createShimmerCells()
     }
 }
 //MARK: output functions
@@ -43,10 +41,15 @@ extension TrendingRepoListViewModel {
     func cellForRowData(at index: Int) -> ReusableTableViewCellViewModelType {
         dataSourceArray[index]
     }
-    
 }
 
 extension TrendingRepoListViewModel {
+    
+    func viewHasAppeared() {
+        createShimmerCells()
+        fetchGitRepos()
+    }
+    
     func fetchGitRepos() {
         self.apiService.getGitTrendingRepo {[weak self] result in
             guard let self = self else { return }
