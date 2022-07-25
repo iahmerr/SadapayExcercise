@@ -78,10 +78,9 @@ private extension TrendingRepoListViewController {
             }
         }
     }
-    // show and show detail view.
+    
     func showNetworkError() {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        view.addSubview(errorView)
+        self.navigationController?.view.addSubview(errorView)
         
         errorView.retryPressedClosure = { [weak self] in
             guard let self = self else { return }
